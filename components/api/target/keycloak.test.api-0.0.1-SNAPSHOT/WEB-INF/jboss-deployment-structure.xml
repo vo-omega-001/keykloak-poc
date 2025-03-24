@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+    <deployment>
+        <exclude-subsystems>
+            <subsystem name="pojo"/>
+        </exclude-subsystems>
+        <exclusions>
+            <!-- Abandon des provided au profit de versions plus avancées -->
+            <module name="com.fasterxml.jackson.core.jackson-annotations"/>
+            <module name="com.fasterxml.jackson.core.jackson-core"/>
+            <module name="com.fasterxml.jackson.core.jackson-databind"/>
+            <module name="com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider"/>
+            <module name="org.jboss.resteasy.resteasy-jackson2-provider"/>
+<!--            <module name="org.jboss.resteasy.resteasy-jaxb-provider"/>-->
+            <module name="org.jboss.logging"/>
+        </exclusions>
+        <dependencies>
+            <module name="org.jacorb"/>
+            <module name="org.jboss.resteasy.resteasy-jaxrs"/>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>

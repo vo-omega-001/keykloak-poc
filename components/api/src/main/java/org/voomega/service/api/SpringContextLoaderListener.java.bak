@@ -1,0 +1,15 @@
+package org.voomega.service.api;
+
+import org.springframework.web.context.ConfigurableWebApplicationContext;
+import org.springframework.web.context.ContextLoaderListener;
+
+import javax.servlet.ServletContext;
+
+
+public class SpringContextLoaderListener extends ContextLoaderListener {
+
+    @Override
+    protected void customizeContext(ServletContext sc, ConfigurableWebApplicationContext wac) {
+        super.customizeContext(sc, wac);
+    }
+}

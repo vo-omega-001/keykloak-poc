@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TerminalProjectOptionsProvider">
+    <envs>
+      <env key="PATH" value="C:\WINDOWS\system32\;C:\WINDOWS\;C:\WINDOWS\System32\Wbem\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\\;C:\WINDOWS\System32\OpenSSH\\;C:\Windows\CCM\;C:\WINDOWS\system32\;C:\WINDOWS\;C:\WINDOWS\System32\Wbem\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\\;C:\WINDOWS\System32\OpenSSH\\;C:\00__INSTALL\02__Network\Clients\scoop\myapps\shims\;C:\00__INSTALL\04__Platforms\Python\3.7.5\Scripts\;C:\00__INSTALL\04__Platforms\Python\3.7.5\;C:\00__INSTALL\04__Platforms\JDK\jdk-8u221\bin\;C:\00__INSTALL\04__Platforms\Golang\1.19.4\bin\;C:\00__INSTALL\02__Network\Clients\AWS-CLI\64PY3\bin\\;C:\00__INSTALL\02__Network\Servers\postgresql-14.1-1\bin\;C:\00__INSTALL\02__Network\Servers\mongodb-4.0.2\bin\;C:\00__INSTALL\02__Network\Servers\mysql-5.7.26-winx64\bin\;C:\00__INSTALL\02__Network\Servers\apache-tomee-plume-7.1.1\bin\;C:\00__INSTALL\02__Network\Servers\node\node-v22.14.0-win-x64\;C:\00__INSTALL\02__Network\Clients\curl\curl-7.70.0-win64-mingw\bin\;C:\00__INSTALL\03__Dev\skaffold\1.19.0\;C:\00__INSTALL\03__Dev\terraform\1.4.0\;C:\00__INSTALL\03__Dev\apache-maven-3.6.2\bin\;C:\00__INSTALL\03__Dev\VSCode\1.90.2\bin\;C:\00__INSTALL\03__Dev\apache-maven\3.6.3\bin\;C:\00__INSTALL\03__Dev\Git\2.23.0\cmd\;C:\00__INSTALL\02__Network\Clients\scoop\shims\;C:\01__PROJECTS\Formations\keykloak-poc\components\ihm\node_modules\@angular\cli;C:\Users\voules\scoop\shims\;C:\Users\voules\AppData\Local\Microsoft\WindowsApps\;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps\;" />
+    </envs>
+  </component>
+</project>

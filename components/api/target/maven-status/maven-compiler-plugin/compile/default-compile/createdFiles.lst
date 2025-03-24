@@ -1,0 +1,6 @@
+org\voomega\service\api\model\ResourceDto.class
+org\voomega\service\api\factory\ResourceDtoFactory.class
+org\voomega\service\api\model\HeartBeat.class
+org\voomega\service\api\model\ResourceEntity.class
+org\voomega\service\api\factory\ResourceEntityFactory.class
+org\voomega\service\api\ResourceController.class

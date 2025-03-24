@@ -1,0 +1,17 @@
+package org.voomega.service.api;
+
+import javax.ws.rs.core.Application;
+import javax.ws.rs.ApplicationPath;
+
+
+@ApplicationPath("/api")
+public class CustomApplication extends Application {
+
+    public CustomApplication() {
+        int test= 0;
+        test+=1;
+    }
+
+
+
+}
