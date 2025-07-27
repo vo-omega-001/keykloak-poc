@@ -1,0 +1,120 @@
+{
+    "clients": [{
+            "attributes": {
+                "login_theme": "keycloak.v2"
+            },
+            "clientId": "dm91bWVnYS5yZWFsbS5mb3Iua2V5Y2xvYWsyNi4zLjEK",
+            "enabled": true,
+            "protocolMappers": [{
+                    "config": {
+                        "access.token.claim": "true",
+                        "claim.name": "role",
+                        "id.token.claim": "true",
+                        "jsonType.label": "String",
+                        "multivalued": "true",
+                        "user.attribute": "foo"
+                    },
+                    "consentRequired": false,
+                    "name": "groups",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-realm-role-mapper"
+                }
+            ],
+            "publicClient": false,
+            "redirectUris": ["https://*", "http://*"],
+            "secret": "dm91bWVnYS5yZWFsbS5zZWNyZXQK",
+            "serviceAccountsEnabled": true
+        }
+    ],
+    "enabled": true,
+    "loginTheme": "keycloak.v2",
+    "realm": "voomega-realm",
+    "registrationAllowed": false,
+    "requiredCredentials": ["password"],
+    "roles": {
+        "realm": [{
+                "description": "Super manager privileges",
+                "name": "SUPER_MANAGER"
+            }, {
+                "description": "LEADER privileges",
+                "name": "LEADER"
+            }, {
+                "description": "RAA privileges",
+                "name": "RAA"
+            }, {
+                "description": "RAIRMB privileges",
+                "name": "RAIRMB"
+            }, {
+                "description": "RRC3 privileges",
+                "name": "RRC3"
+            }, {
+                "description": "RRDE privileges",
+                "name": "RRDE"
+            }, {
+                "description": "RISRE privileges",
+                "name": "RISRE"
+            }, {
+                "description": "RJP privileges",
+                "name": "RJP"
+            }, {
+                "description": "ROF privileges",
+                "name": "ROF"
+            }
+        ]
+    },
+    "sslRequired": "external",
+    "users": [{
+            "credentials": [{
+                    "type": "password",
+                    "value": "azerty"
+                }
+            ],
+            "email": "vo.admin@voomega.org",
+            "enabled": true,
+            "firstName": "Vo",
+            "lastName": "ADMIN",
+            "realmRoles": ["SUPER_MANAGER", "LEADER", "RAA", "RAIRMB", "RRC3", "RRDE", "RISRE", "RJP", "ROF"],
+            "requiredActions": ["UPDATE_PASSWORD"],
+            "username": "voomega"
+        },{
+            "credentials": [{
+                    "type": "password",
+                    "value": "ertyuiop"
+                }
+            ],
+            "email": "samuel.trautman@voomega.org",
+            "enabled": true,
+            "firstName": "Samuel",
+            "lastName": "TRAUTMAN",
+            "realmRoles": ["LEADER", "RAA", "RAIRMB", "RRC3", "RRDE", "RISRE", "RJP", "ROF"],
+            "requiredActions": ["UPDATE_PASSWORD"],
+            "username": "samuel.trautman"
+        }, {
+            "credentials": [{
+                    "type": "password",
+                    "value": "ertyuiop"
+                }
+            ],
+            "email": "john.rambo@voomega.org",
+            "enabled": true,
+            "firstName": "John",
+            "lastName": "RAMBO",
+            "realmRoles": ["RAA", "RAIRMB", "RRC3", "RRDE", "RISRE", "RJP", "ROF"],
+            "requiredActions": ["UPDATE_PASSWORD"],
+            "username": "john.rambo"
+        }, {
+            "credentials": [{
+                    "type": "password",
+                    "value": "ertyuiop"
+                }
+            ],
+            "email": "john.maclain@voomega.org",
+            "enabled": true,
+            "firstName": "John",
+            "lastName": "MCCLAIN",
+            "realmRoles": ["RRC3", "RRDE", "RISRE", "ROF"],
+            "requiredActions": ["UPDATE_PASSWORD"],
+            "username": "john.maclain"
+        }
+    ]
+}

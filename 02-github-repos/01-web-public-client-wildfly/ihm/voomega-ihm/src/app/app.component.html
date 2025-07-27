@@ -1,0 +1,12 @@
+<app-nav (toggleNavbar)="onToggle()"></app-nav>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened">
+        <app-side></app-side>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

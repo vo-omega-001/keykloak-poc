@@ -1,0 +1,8 @@
+org\voomega\pocs\resources\api\resource\helper\ResourceDtoFactory.class
+org\voomega\pocs\resources\api\healthcheck\api\HeartBeatController.class
+org\voomega\pocs\resources\api\resource\model\ResourceDto.class
+org\voomega\pocs\resources\api\resource\model\ResourceEntity.class
+org\voomega\pocs\resources\api\security\config\SecurityConfigurer.class
+org\voomega\pocs\resources\api\resource\api\ResourceController.class
+org\voomega\pocs\resources\api\security\config\JwtRoleConverter.class
+org\voomega\pocs\resources\api\resource\helper\ResourceEntityFactory.class

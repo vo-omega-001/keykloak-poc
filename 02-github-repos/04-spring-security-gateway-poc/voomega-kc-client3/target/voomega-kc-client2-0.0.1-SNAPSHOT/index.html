@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<style>
+		.button {
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		}
+
+		.button1 {background-color: #04AA6D;} /* Green */
+		.button2 {background-color: #008CBA;} /* Blue */
+		.button3 {background-color: #a8a432;} /* Gold */
+	</style>
+	</head>
+	<body>
+
+		<h1>Client II KC POC</h1>
+
+		<button type="button"
+				onclick="document.getElementById('demo').innerHTML = Date()">
+			Click me to display Date and Time.
+		</button>
+
+		<p id="demo"></p>
+
+		<button type="submit" class="button button3" value="discover" onclick="discover()">Discover</button>
+		<button type="submit" class="button button3" value="getUserInfo" onclick="getUserInfo()">UserInfo</button>
+		<button type="submit" class="button button3" value="logout" onclick="logout()">Logout</button>
+		<br>
+		<button type="submit" class="button button1" value="healthCheck" onclick="healthCheck()">HealthCheck</button>
+		<button type="submit" class="button button2" value="getResourceById" onclick="getResourceById()">ResourceById</button>
+		<button type="submit" class="button button2" value="getResources" onclick="getResources()">Resources</button>
+
+
+
+		<script type="text/javascript">
+		    function discover() {
+				httpGet('/discover', (response)=> {});
+			}
+		    function getUserInfo() {
+				httpGet('/getUserInfo', (response)=> {alert(response);});
+			}
+			function logout() {
+				httpGet('/logout', (response)=> { location.reload(); });
+			}
+		    function healthCheck() {
+				httpGet('/voomega-resources-api-poc2/api/healthcheck/heartbeat', (response)=> {alert(response);});
+			}
+		    function getResourceById() {
+			    httpGet('/voomega-resources-api-poc2/api/resource/0', (response)=> {alert(response);});
+			}
+
+			function getResources() {
+			    httpGet('/voomega-resources-api-poc2/api/resource', (response)=> {alert(response);});
+			}
+
+			function httpGet(path, callback) {
+				var xhr = new XMLHttpRequest();
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState === 4) {
+						callback(xhr.response);
+					}
+				}
+				xhr.open('get', path, true);
+				xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+				xhr.send();
+			}
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="${catalina.base}/deploy/dmg-client-0.0.1-SNAPSHOT.war" reloadable="true">
+
+	<Loader jakartaConverter="TOMCAT" />
+	
+</Context>

@@ -1,0 +1,8 @@
+org\voomega\keycloak\pocs\resource\api\ResourceController.class
+org\voomega\keycloak\pocs\resource\helper\ResourceDtoFactory.class
+org\voomega\keycloak\pocs\resource\model\ResourceDto.class
+org\voomega\keycloak\pocs\resource\model\ResourceEntity.class
+org\voomega\keycloak\pocs\security\config\SecurityConfigurer.class
+org\voomega\keycloak\pocs\healthcheck\api\HeartBeatController.class
+org\voomega\keycloak\pocs\resource\helper\ResourceEntityFactory.class
+org\voomega\keycloak\pocs\security\config\JwtRoleConverter.class

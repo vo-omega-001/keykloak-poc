@@ -1,0 +1,107 @@
+{
+    "clients": [{
+            "attributes": {
+                "login_theme": "keycloak.v2"
+            },
+            "clientId": "GtXtFAxGm5Tc6F42kYjS8HCRVD6pe7ea",
+            "enabled": true,
+            "protocolMappers": [{
+                    "config": {
+                        "access.token.claim": "true",
+                        "claim.name": "role",
+                        "id.token.claim": "true",
+                        "jsonType.label": "String",
+                        "multivalued": "true",
+                        "user.attribute": "foo"
+                    },
+                    "consentRequired": false,
+                    "name": "groups",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-realm-role-mapper"
+                }
+            ],
+            "publicClient": false,
+            "redirectUris": ["https://*", "http://*"],
+            "secret": "8ULzWaIvDEPMLCEJ7wREG4upvB0jqsOa",
+            "serviceAccountsEnabled": true
+        }
+    ],
+    "enabled": true,
+    "loginTheme": "keycloak.v2",
+    "realm": "maop-realm",
+    "registrationAllowed": false,
+    "requiredCredentials": ["password"],
+    "roles": {
+        "realm": [{
+                "description": "DB manager privileges",
+                "name": "DB_MANAGER"
+            }, {
+                "description": "LEAD privileges",
+                "name": "LEAD"
+            }, {
+                "description": "AAR privileges",
+                "name": "AAR"
+            }, {
+                "description": "AIRMOB privileges",
+                "name": "AIRMOB"
+            }, {
+                "description": "C3 privileges",
+                "name": "C3"
+            }, {
+                "description": "DEF privileges",
+                "name": "DEF"
+            }, {
+                "description": "ISREW privileges",
+                "name": "ISREW"
+            }, {
+                "description": "JPR privileges",
+                "name": "JPR"
+            }, {
+                "description": "OFF privileges",
+                "name": "OFF"
+            }
+        ]
+    },
+    "sslRequired": "external",
+    "users": [{
+            "credentials": [{
+                    "type": "password",
+                    "value": "sia2015*"
+                }
+            ],
+            "email": "pierre.dupont@moss.com",
+            "enabled": true,
+            "firstName": "Pierre",
+            "lastName": "DUPONT",
+            "realmRoles": ["DB_MANAGER", "LEAD", "AAR", "AIRMOB", "C3", "DEF", "ISREW", "JPR", "OFF"],
+            "requiredActions": ["UPDATE_PASSWORD"],
+            "username": "pierre.dupont"
+        }, {
+            "credentials": [{
+                    "type": "password",
+                    "value": "sia2015*"
+                }
+            ],
+            "email": "bob.dylan@moss.com",
+            "enabled": true,
+            "firstName": "Bob",
+            "lastName": "DYLAN",
+            "realmRoles": ["LEAD", "AAR", "AIRMOB", "C3", "DEF", "ISREW", "JPR", "OFF"],
+            "requiredActions": ["UPDATE_PASSWORD"],
+            "username": "bob.dylan"
+        }, {
+            "credentials": [{
+                    "type": "password",
+                    "value": "sia2015*"
+                }
+            ],
+            "email": "john.maclain@moss.com",
+            "enabled": true,
+            "firstName": "John",
+            "lastName": "MCCLAIN",
+            "realmRoles": ["C3", "DEF", "ISREW", "OFF"],
+            "requiredActions": ["UPDATE_PASSWORD"],
+            "username": "john.maclain"
+        }
+    ]
+}

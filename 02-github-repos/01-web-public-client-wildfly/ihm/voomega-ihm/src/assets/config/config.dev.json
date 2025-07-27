@@ -1,0 +1,16 @@
+{
+  "env": {
+    "name": "DEV",
+    "baseUrl": "."
+  },
+  "api" : {
+    "resource": {
+      "path": "api/resource",
+      "getResource": "get/{{id}}",
+      "getResources": "get",
+      "createResource": "create",
+      "updateResource": "update/{id}",
+      "deleteResource": "delete/{id}"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="${catalina.base}/__deploy__/voomega-kc-client2-0.0.1-SNAPSHOT.war" reloadable="true">
+
+	<Loader jakartaConverter="TOMCAT" />
+	
+</Context>

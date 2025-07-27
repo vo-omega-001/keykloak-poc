@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.voomega.keycloak.pocs</groupId>
+        <artifactId>kc-oauth2proxy-poc</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>voomega-kc-client2</artifactId>
+    <name>voomega-kc-client2</name>
+    <description>client consuming an api under keycloak and oauth2proxy protection</description>
+    <packaging>war</packaging>
+
+    <properties>
+        <web.resources.path>./WebContent/ui</web.resources.path>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+                    <webResources>
+                        <resource>
+                            <directory>src/main/webapp/WEB-INF</directory>
+                            <targetPath>WEB-INF</targetPath>
+                        </resource>
+                        <resource>
+                            <directory>${web.resources.path}/dist</directory>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="5"/>
+        <property name="maxPoolSize" value="10"/>
+        <property name="queueCapacity" value="25"/>
+    </bean>
+
+    <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+        <property name="scopes">
+            <map>
+                <entry key="thread">
+                    <bean class="org.springframework.context.support.SimpleThreadScope"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="voomegaProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="ignoreResourceNotFound" value="true"/>
+<!--        <property name="locations" value="classpath:voomega.properties"/>-->
+        <property name="locations">
+            <list>
+                <value>classpath:voomega.properties</value>
+            </list>
+        </property>
+    </bean>
+    <context:property-placeholder properties-ref="voomegaProperties"
+                                  system-properties-mode="OVERRIDE"
+                                  ignore-resource-not-found="true"
+                                  ignore-unresolvable="true"/>
+<!--    <context:property-placeholder location="classpath:voomega.properties"/>-->
+
+    <context:component-scan base-package="org.voomega.pocs.resources.api"/>
+<!--    <context:component-scan base-package="org.voomega.pocs.resources.api.security"/>-->
+
+    <context:annotation-config/>
+    <import resource="classpath:springmvc-resteasy.xml" />
+
+</beans>
